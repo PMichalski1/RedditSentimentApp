@@ -1,4 +1,4 @@
-Reddit sentiment, emotion and keyword analysis app
+Reddit sentiment, emotion and keyword analysis
 1. Charakterystyka oprogramowania 
 a. Nazwa skrócona  
 Reddit SEK 
@@ -18,7 +18,7 @@ a. Pogrupowana lista składająca się z następujących kolumn:
 i. 
 identyfikator, 
 ii. 
-iii. 
+iii.
 iv. 
 v. 
 nazwa,  
@@ -26,7 +26,7 @@ opis,
 priorytet: [1 - wymagane, 2 - przydatne, 3 – opcjonalne] 
 kategoria: [funkcjonalne, pozafunkcjonalne] 
 
-6. Architektura systemu/oprogramowania 
+7. Architektura systemu/oprogramowania 
 a. Architektura rozwoju - stos technologiczny w postaci wykazu 
 składającego się z: nazwy, przeznaczenia, numeru wersji  
 Narzędzie programistyczne i technologie informatyczne wykorzystywane 
