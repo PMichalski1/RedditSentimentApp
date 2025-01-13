@@ -1,6 +1,4 @@
-# RedditSentimentApp
-I. 
-Wymagane dokumenty  
+Reddit sentiment, emotion and keyword analysis app
 1. Charakterystyka oprogramowania 
 a. Nazwa skrócona  
 Reddit SEK 
@@ -11,8 +9,9 @@ Jeden dwa akapity
   Aplikacja pozwala na połączenie z API reddit'a w celu pobrania danych dla wpisanych słów kluczowych. Pobrane dane są wykorzystywane w celu zbadania analizy sentymentu prostą metodą TextBlob, wskazując liczbę komentarzy/postów pozytywnych, negatywnych oraz neutrolanych, analizę sentymentu modelem distilBERT (na pozytywne/negatywne), analizę emocji modelem distilBERT (na 6 klas- joy, angry, fear, love, surprise, sadness), zliczanie najczęściej występujących słów kluczowych (keyword analysis) wraz z wizualizacją wyników powyższych metod.
 3. Prawa autorskie. 
 a. Autorzy
-© Piotr Michalski
+Piotr Michalski
 b. Warunki licencyjne do oprogramowania wytworzonego przez grupę
+GNU General Public License v3.0
 
 5. Specyfikacja wymagań – alternatywnie: a lub b 
 a. Pogrupowana lista składająca się z następujących kolumn:  
