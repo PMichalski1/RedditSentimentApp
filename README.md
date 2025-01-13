@@ -13,7 +13,7 @@ Piotr Michalski
 b. Warunki licencyjne do oprogramowania wytworzonego przez grupę
 GNU General Public License v3.0
 
-5. Specyfikacja wymagań – alternatywnie: a lub b 
+5. Specyfikacja wymagań
 a. Pogrupowana lista składająca się z następujących kolumn:  
 i. 
 identyfikator, 
@@ -25,7 +25,6 @@ nazwa,
 opis, 
 priorytet: [1 - wymagane, 2 - przydatne, 3 – opcjonalne] 
 kategoria: [funkcjonalne, pozafunkcjonalne] 
-b. Historyjki użytkownika (ang. user stories)
 
 6. Architektura systemu/oprogramowania 
 a. Architektura rozwoju - stos technologiczny w postaci wykazu 
