@@ -6,15 +6,14 @@ Reddit SEK
 b. Nazwa pełna
 Reddit Sentiment, Emotion and Keyword analysis app
 c. Krótki opis ze wskazaniem celów 
-Jeden dwa akapity
   Aplikacja pozwala na połączenie z API reddit'a w celu pobrania danych dla wpisanych słów kluczowych. Pobrane dane są wykorzystywane w celu zbadania analizy sentymentu prostą metodą TextBlob, wskazując liczbę komentarzy/postów pozytywnych, negatywnych oraz neutrolanych, analizę sentymentu modelem distilBERT (na pozytywne/negatywne), analizę emocji modelem distilBERT (na 6 klas- joy, angry, fear, love, surprise, sadness), zliczanie najczęściej występujących słów kluczowych (keyword analysis) wraz z wizualizacją wyników powyższych metod.
-3. Prawa autorskie. 
+2. Prawa autorskie. 
 a. Autorzy
 Piotr Michalski
 b. Warunki licencyjne do oprogramowania wytworzonego przez grupę
 GNU General Public License v3.0
 
-`5. Specyfikacja wymagań`
+`3. Specyfikacja wymagań`
 | Identyfikator | Nazwa                                      | Opis                                                                                      | Priorytet | Kategoria        |
 |---------------|--------------------------------------------|-------------------------------------------------------------------------------------------|-----------|------------------|
 | W01           | Pobieranie danych                          | Aplikacja umożliwia pobranie danych na wybrane tematy.                                      | 1         | Funkcjonalne     |
@@ -34,16 +33,47 @@ GNU General Public License v3.0
 | W16           | Wybór ilości komentarzy                    | Aplikacja pozwala na wybór liczby pobranych komentarzy użytkowników reddita.              | 3         | Funkcjonalne     |
 | W17           | Automatyczne dostosowywanie liczby pobieranych komentarzy | Aplikacja, w zależności od liczby wybranych komentarzy, ustawia limity pobrania odpowiedzi z pojedynczego posta w celu uzyskania reprezentatywnych wyników. | 3         | Pozafunkcjonalne |
 
-7. Architektura systemu/oprogramowania 
-a. Architektura rozwoju - stos technologiczny w postaci wykazu 
-składającego się z: nazwy, przeznaczenia, numeru wersji  
-Narzędzie programistyczne i technologie informatyczne wykorzystywane 
-podczas rozwoju oprogramowania 
-b. Architektura uruchomieniowa - stos technologiczny w postaci wykazu 
-składającego się z: nazwy, przeznaczenia, numeru wersji 
-Narzędzie programistyczne i technologie informatyczne wymagane podczas 
-wykonywania oprogramowania lub systemu w środowisku docelowym
+`4. a. Architektura systemu/oprogramowania `
 
-8. Testy 
-a. Scenariusze testów 
-b. Sprawozdanie z wykonania scenariuszy testów
+| **Nazwa**       | **Przeznaczenie**                                      | **Nr wersji**     |
+|-----------------|--------------------------------------------------------|-------------------|
+| **Python**      | Środowisko uruchomieniowe do aplikacji                 | 3.9               |
+| **textblob**    | Analiza tekstu i przetwarzanie języka naturalnego      | 0.18.0.post0      |
+| **transformers**| Przetwarzanie języka naturalnego, modele NLP           | 4.47.0            |
+| **matplotlib**  | Tworzenie wykresów i wizualizacja danych               | 3.8.1             |
+| **praw**        | Interakcja z API Reddita                               | 7.8.1             |
+| **pandas**      | Analiza danych w formacie tabelarycznym                 | 2.1.2             |
+| **nltk**        | Natural Language Toolkit, przetwarzanie tekstów        | 3.8.1             |
+| **wordcloud**   | Generowanie chmur słów                                 | 1.9.3             |
+| **tensorflow**  | Tworzenie i trenowanie modeli uczenia maszynowego      | 2.18.0            |
+| **tf_keras**    | Interfejs do pracy z Keras w TensorFlow                 | 2.18.0            |
+| **os**          | Praca z systemem operacyjnym                            | -                 |
+| **csv**         | Praca z plikami CSV                                    | -                 |
+| **glob**        | Praca z plikami w systemie                             | -                 |
+| **collections** | Praca z kontenerami i strukturami danych               | -                 |
+| **re**          | Obsługa wyrażeń regularnych                            | -                 |
+| **BytesIO**     | Obsługa danych binarnych w pamięci                     | -                 |
+| **tkinter**     | Interfejs graficzny (GUI)                              | -                 |
+
+
+`b. Architektura uruchomieniowa `
+| **Nazwa**                   | **Przeznaczenie**                                      | **Nr wersji**     |
+|-----------------------------|--------------------------------------------------------|-------------------|
+| **Edytor kodu (np. Visual Studio Code)** | Włączenie aplikacji                              | -                 |
+| **Przeglądarka internetowa** | Założenie konta Reddit, pobranie kluczy dostępu        | -                 |
+| **Środowisko systemowe**     | System operacyjny, na którym aplikacja będzie działać  | Windows           |
+
+`5. Testy`
+| **Nr testu** | **Opis**                                              | **Kroki testowe**                                                                                             | **Oczekiwany wynik**                                                                                       | **Wynik** |
+|--------------|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-----------|
+| T01          | Pobieranie danych                                     | 1. Uruchom aplikację 2. Wpisz temat do pobrania danych 3. Kliknij „Fetch reddit data”                          | Dane powinny zostać pobrane i zapisane w pliku CSV.                                                           | ok        |
+| T02          | Załadowanie danych dla jednego produktu              | 1. Uruchom aplikację 2. Załaduj dane dla jednego produktu                                                     | Aplikacja powinna umożliwia załadowanie danych dla jednego produktu.                                        | ok        |
+| T03          | Załadowanie danych dla dwóch produktów jednocześnie   | 1. Uruchom aplikację 2. Załaduj dane dla dwóch produktów jednocześnie                                          | Aplikacja powinna umożliwia załadowanie danych dla dwóch produktów jednocześnie.                            | ok        |
+| T04          | Wykonanie analizy TextBlob dla jednego produktu      | 1. Uruchom aplikację 2. Załaduj dane dla jednego produktu 3. Kliknij 'TextBlob Analysis' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy TextBlob dla jednego produktu w okienku tekstowym oraz wykres obok.       | ok        |
+| T05          | Wykonanie analizy TextBlob dla dwóch produktów       | 1. Uruchom aplikację 2. Załaduj dane dla dwóch produktów jednocześnie 3. Kliknij 'TextBlob Analysis' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy TextBlob dla dwóch produktów jednocześnie w okienku tekstowym oraz dwa wykresy obok. | ok        |
+| T06          | Wykonanie analizy Bert Sentiment dla jednego produktu | 1. Uruchom aplikację 2. Załaduj dane dla jednego produktu 3. Kliknij 'Bert Sentiment' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Bert Sentiment dla jednego produktu w okienku tekstowym oraz wykres obok. | ok        |
+| T07          | Wykonanie analizy Bert Sentiment dla dwóch produktów | 1. Uruchom aplikację 2. Załaduj dane dla dwóch produktów jednocześnie 3. Kliknij 'Bert Sentiment' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Bert Sentiment dla dwóch produktów jednocześnie w okienku tekstowym oraz dwa wykresy obok. | ok        |
+| T08          | Wykonanie analizy Bert Emotion dla jednego produktu  | 1. Uruchom aplikację 2. Załaduj dane dla jednego produktu 3. Kliknij 'Bert Emotion' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Bert Emotion dla jednego produktu w okienku tekstowym oraz wykres obok.  | ok        |
+| T09          | Wykonanie analizy Bert Emotion dla dwóch produktów   | 1. Uruchom aplikację 2. Załaduj dane dla dwóch produktów jednocześnie 3. Kliknij 'Bert Emotion' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Bert Emotion dla dwóch produktów jednocześnie w okienku tekstowym oraz dwa wykresy obok. | ok        |
+| T10          | Wykonanie analizy Keyword Analysis dla jednego produktu | 1. Uruchom aplikację 2. Załaduj dane dla jednego produktu 3. Kliknij 'Keyword analysis' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Keyword Analysis dla jednego produktu w okienku tekstowym oraz wykres obok. | ok        |
+| T11          | Wykonanie analizy Keyword Analysis dla dwóch produktów | 1. Uruchom aplikację 2. Załaduj dane dla dwóch produktów jednocześnie 3. Kliknij 'Keyword analysis' 4. Kliknij 'Perform Analysis' | Aplikacja wyświetli wyniki analizy Keyword Analysis dla dwóch produktów jednocześnie w okienku tekstowym oraz dwa wykresy obok. | ok        |
