@@ -33,8 +33,6 @@ GNU General Public License v3.0
 | W16           | Wybór ilości komentarzy                    | Aplikacja pozwala na wybór liczby pobranych komentarzy użytkowników reddita.              | 3         | Funkcjonalne     |
 | W17           | Automatyczne dostosowywanie liczby pobieranych komentarzy | Aplikacja, w zależności od liczby wybranych komentarzy, ustawia limity pobrania odpowiedzi z pojedynczego posta w celu uzyskania reprezentatywnych wyników. | 3         | Pozafunkcjonalne |
 
-
-
 7. Architektura systemu/oprogramowania 
 a. Architektura rozwoju - stos technologiczny w postaci wykazu 
 składającego się z: nazwy, przeznaczenia, numeru wersji  
