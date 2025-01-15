@@ -1,3 +1,4 @@
+
 Reddit sentiment, emotion and keyword analysis
 1. Charakterystyka oprogramowania 
 a. Nazwa skrócona  
@@ -13,7 +14,7 @@ Piotr Michalski
 b. Warunki licencyjne do oprogramowania wytworzonego przez grupę
 GNU General Public License v3.0
 
-5. Specyfikacja wymagań
+`5. Specyfikacja wymagań`
 | Identyfikator | Nazwa                                      | Opis                                                                                      | Priorytet | Kategoria        |
 |---------------|--------------------------------------------|-------------------------------------------------------------------------------------------|-----------|------------------|
 | W01           | Pobieranie danych                          | Aplikacja umożliwia pobranie danych na wybrane tematy.                                      | 1         | Funkcjonalne     |
