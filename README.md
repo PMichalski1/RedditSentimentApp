@@ -2,7 +2,7 @@
 Reddit sentiment, emotion and keyword analysis
 1. Charakterystyka oprogramowania 
 a. Nazwa skrócona  
-Reddit SEK 
+Reddit SEK analysis
 b. Nazwa pełna
 Reddit Sentiment, Emotion and Keyword analysis app
 c. Krótki opis ze wskazaniem celów 
